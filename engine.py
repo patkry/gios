@@ -4,7 +4,7 @@ import psycopg2
 import sqlalchemy
 from sqlalchemy import create_engine
 
-engine = create_engine('postgresql+psycopg2://gios11:gios111@/gios1')
+engine = create_engine('postgresql+psycopg2://patrycja:patrycja74@/gios1')
 
 if __name__ == "__main__":
     import pandas as pd

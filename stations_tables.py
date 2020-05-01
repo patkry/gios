@@ -37,4 +37,17 @@ sensors = Table('sensors', metadata,
     Column('station_id', Integer, ForeignKey('stations.id'), nullable=False)
 )
 
+sensors_d = Table('sensors_d', metadata,
+    Column('sensor_id', Integer, ForeignKey("sensors.id"), primary_key=True, nullable=False),
+    Column('date_s', DateTime, primary_key=True, nullable=False),
+    Column('sensor_v', Float)
+)
+
+quality = Table('quality', metadata,
+    Column('station_id', Integer, ForeignKey('stations.id'), primary_key=True, nullable=False),
+    Column('date_q', DateTime, primary_key=True, nullable=False),
+    Column('level_id', Integer),
+    Column('level_name', String(20))
+)
+
 metadata.create_all(engine)

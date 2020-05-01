@@ -1,2 +1,4 @@
 .vscode/
 venv/
+quality_ex.py
+test.py
