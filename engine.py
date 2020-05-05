@@ -5,7 +5,7 @@ from sqlalchemy import create_engine
 
 """ Engine to connect python to postgresql database for this project - gios1, via psycopg2. """
 
-engine = create_engine('postgresql+psycopg2://patrycja:patrycja74@/gios1')
+engine = create_engine('postgresql+psycopg2://gios11:gios111/gios1')
 
 
 def pd_query(sql_guery):
