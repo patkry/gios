@@ -1,8 +1,12 @@
+""" Creates function that downloads air quality data at a given station, then processes it to DataFrame ready for saving in the database.
+"""
+
 import json, requests
 import pandas as pd
 from pandas.io.json import json_normalize
 
 def load_q(s):
+    """ Function with station id as argument, downloads data from api, processes part of it and returns it as DataFrame. """
     url = 'https://api.gios.gov.pl/pjp-api/rest/aqindex/getIndex/' + str(s)
     request = requests.get(url)
     q_all=json.loads(request.text)
