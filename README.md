@@ -4,6 +4,8 @@ My goal was to download data, designe database for it, and place data into datab
 
 branch: sql_visual
 
+python 3.5.3
+
 So we have:
 - rest api;
 - python - pandas, sqlalchemy, psycopg2, seaborn;
